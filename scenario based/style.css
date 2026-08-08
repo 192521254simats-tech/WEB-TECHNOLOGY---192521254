@@ -1,0 +1,844 @@
+/* =====================================================
+   UNIVERSITY EVENT REGISTRATION PORTAL
+   Main External CSS File
+   ===================================================== */
+
+
+/* =====================================================
+   1. GLOBAL RESET AND BASIC STYLES
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   2. HEADER AND NAVIGATION
+   ===================================================== */
+
+.site-header {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+
+    /* Sticky positioning */
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.brand h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+}
+
+.brand p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+/* Navigation */
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 9px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Pseudo-class selector */
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+
+/* =====================================================
+   3. HERO SECTION
+   ===================================================== */
+
+.hero {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.95),
+            rgba(37, 99, 235, 0.85)
+        );
+
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    /* Text shadow */
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content > p {
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.event-period {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.cta-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 13px 30px;
+
+    background-color: white;
+    color: #1d4ed8;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   4. SECTION COMMON STYLES
+   ===================================================== */
+
+.events-section,
+.registration-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-tag {
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2,
+.form-introduction h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+
+/* Pseudo-element selector */
+
+.section-heading h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #2563eb;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   5. EVENT GRID
+   ===================================================== */
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   6. EVENT CARDS
+   ===================================================== */
+
+.event-card {
+    /* Demonstrates relative positioning */
+    position: relative;
+
+    background-color: white;
+
+    /* Content + Padding + Border + Margin
+       are demonstrated through the box model */
+
+    padding: 28px 22px;
+
+    border: 1px solid #dbe3f0;
+
+    margin: 5px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    /* Prevent content from breaking card */
+    overflow: hidden;
+}
+
+
+/* Child selector */
+
+.event-card > h3 {
+    color: #172554;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+
+/* Class + pseudo-class */
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.18);
+}
+
+
+/* Event icon */
+
+.event-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.category {
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   7. EVENT STATUS BADGE
+   ===================================================== */
+
+.status-badge {
+    /* Absolute positioning */
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 2;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.status-badge.open {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.limited {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+
+/* =====================================================
+   8. EVENT DETAILS
+   ===================================================== */
+
+.event-details {
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+.event-details li {
+    padding: 5px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+
+/* Attribute selector */
+
+.event-details li strong {
+    color: #374151;
+}
+
+.description {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+.registration-status {
+    color: #15803d;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+
+/* Event button */
+
+.event-button {
+    display: block;
+
+    text-align: center;
+
+    padding: 10px 15px;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.event-button:hover,
+.event-button:focus {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   9. REGISTRATION FORM
+   ===================================================== */
+
+.registration-section {
+    max-width: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+}
+
+.registration-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+.form-introduction {
+    padding: 20px 0;
+}
+
+.form-introduction h2 {
+    color: #172554;
+}
+
+.form-introduction > p {
+    color: #64748b;
+}
+
+.form-note {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Form */
+
+.registration-form {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.08);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+
+/* Attribute selectors */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font: inherit;
+
+    background-color: white;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Focus pseudo-class */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
+
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-submit {
+    text-align: right;
+}
+
+.form-submit button {
+    border: none;
+
+    padding: 13px 30px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.form-submit button:hover,
+.form-submit button:focus {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   10. FOOTER
+   ===================================================== */
+
+.site-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 50px 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    max-width: 400px;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover,
+.footer-column a:focus {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-column address {
+    font-style: normal;
+    line-height: 2;
+}
+
+.copyright {
+    text-align: center;
+
+    padding: 18px;
+
+    border-top: 1px solid #334155;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   11. FIXED HELP BUTTON
+   ===================================================== */
+
+.help-button {
+    /* Fixed positioning */
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 2000;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.help-button:hover,
+.help-button:focus {
+    background: #1d4ed8;
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   12. RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* Tablets */
+
+@media screen and (max-width: 1000px) {
+
+    .event-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .registration-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+/* Mobile devices - approximately 375px */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+
+    /* Mobile Header */
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+
+        text-align: center;
+
+        padding: 15px;
+    }
+
+    .brand h1 {
+        font-size: 1.4rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+
+
+    /* Mobile Hero */
+
+    .hero {
+        min-height: 420px;
+        padding: 50px 18px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* Mobile Announcement */
+
+    .announcement {
+        margin: 15px;
+    }
+
+
+    /* Mobile Events */
+
+    .events-section {
+        padding: 50px 15px;
+    }
+
+    .section-heading h2,
+    .form-introduction h2 {
+        font-size: 1.8rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-card {
+        margin: 0;
+    }
+
+
+    /* Mobile Form */
+
+    .registration-section {
+        padding: 50px 15px;
+    }
+
+    .registration-form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .form-submit {
+        text-align: center;
+    }
+
+    .form-submit button {
+        width: 100%;
+    }
+
+
+    /* Mobile Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 40px 20px;
+    }
+
+    .footer-column p {
+        margin: auto;
+    }
+
+
+    /* Mobile Help Button */
+
+    .help-button {
+        width: 45px;
+        height: 45px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
